@@ -19,6 +19,10 @@ In the future, I hope to add the following:
 - Additionally, this application was created in Windows and may not work on other operating systems.
 - Finally, this application was tested using a North American version of Monster Hunter 3 Ultimate (Wii U), and so other versions may not work as intended.
 
+## Known Issues
+
+- When runnning MH3U Save Editor.exe, you may get a Windows SmartScreen alert notifying you that this program has an "unknown publisher". This is normal. To avoid this alert, I have to pay a subscription to buy a certificate from a known publisher. I can't currently afford this, especially since this project is something I was doing for fun in my downtime. For what it's worth, I assure you nothing in this application can harm your computer.
+
 ## Pre-Requisite:
 
 1. Locate your Monster Hunter 3 Ultimate (MH3U) save file on your computer. The easiest way is to open Cemu, then right-click on MH3U > Save directory > user > 80000001.
@@ -29,7 +33,7 @@ In the future, I hope to add the following:
 
 1. Open MH3U Save Editor.exe.
 2. Click File, then Open File (in the top left corner).
-3. In the new pop-up, navigate to your MH3U save file (which you just found in the pre-requisite section) and open it.
+3. In the new pop-up window, navigate to your MH3U save file (which you just found in the pre-requisite section) and open it.
 4. The application will update the right side with your save file's item box, in a 10 by 10 grid. Each button in the grid will list the item name and amount within it (i.e. Mega Potion x99).
 5. If the words are cut-off, you can hover over the button with your mouse (don't click) and a hint pop-up will tell you the info of the item.
 6. Above the grid is a drop-down menu listing Box Page 1-10. As the name suggests, change this value to change the page of the box.
