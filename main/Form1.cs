@@ -186,22 +186,22 @@ namespace main
                     byte clothingColorRed = saveData[22416];
                     byte clothingColorGreen = saveData[22417];
                     byte clothingColorBlue = saveData[22418];
-
-                    /*Obviously change the value whenever you find its location
-                    byte gender = saveData[0];
-                    byte face = saveData[0];
-                    byte feature1 = saveData[0];
-                    byte feature2 = saveData[0];
-                    byte feature1ColorRed = saveData[0];
-                    byte feature1ColorGreen = saveData[0];
-                    byte feature1ColorBlue = saveData[0];
-                    byte feature2ColorRed = saveData[0];
-                    byte feature2ColorGreen = saveData[0];
-                    byte feature2ColorBlue = saveData[0];
-                    byte skinColorRed = saveData[0];
-                    byte skinColorGreen = saveData[0];
-                    byte skinColorBlue = saveData[0];
-                    */
+                    byte gender = saveData[40];
+                    byte face = saveData[41];
+                    byte hairstyle = saveData[42];
+                    byte feature1 = saveData[29715];
+                    byte feature2 = saveData[29719];
+                    byte feature1ColorRed = saveData[29712];
+                    byte feature1ColorGreen = saveData[29713];
+                    byte feature1ColorBlue = saveData[29714];
+                    byte feature2ColorRed = saveData[29716];
+                    byte feature2ColorGreen = saveData[29717];
+                    byte feature2ColorBlue = saveData[29718];
+                    byte skinColorRed = saveData[29704];
+                    byte skinColorGreen = saveData[29705];
+                    byte skinColorBlue = saveData[29706];
+                    byte voice = saveData[207];
+                    byte[] hunterRank = new byte[] { 00, 00, saveData[23112], saveData[23113] };
 
                     //Convert playerName (player's name written in hex) to readable text, and update the player name textbox to it:
                     textBoxPlayerName.Text = System.Text.Encoding.UTF8.GetString(playerName);
@@ -214,10 +214,55 @@ namespace main
                     numericUpDownResource.Text = BitConverter.ToInt32(resource, 0).ToString();
                     Array.Reverse(time);
                     numericUpDownTime.Text = BitConverter.ToInt32(time, 0).ToString();
+                    Array.Reverse(hunterRank);
+                    numericUpDownHR.Text = BitConverter.ToInt32(hunterRank, 0).ToString();
 
-                    //Changing hair color button to hair color selected in game
+                    //Selecting the gender radio button to match save file
+                    if (gender == 0) // Male
+                    { 
+                        radioButtonMale.Checked = true;
+                        radioButtonFemale.Checked = false;
+
+                    }
+
+                    else if (gender == 1) // Female
+                    { 
+                        radioButtonFemale.Checked = true;
+                        radioButtonMale.Checked = false;
+                    }
+
+                    //Setting the Feature checkboxes
+                    if(feature1 == 255) // If the byte = FF, then that means the feature is ON
+                    {
+                        checkBoxFeature1.Checked = true;
+                    }
+
+                    else if (feature1 == 0) // If the byte = 00, then that means the feature is OFF
+                    {
+                        checkBoxFeature1.Checked = false;
+                    }
+
+                    if (feature2 == 255)
+                    {
+                        checkBoxFeature2.Checked = true;
+                    }
+
+                    else if (feature2 == 0)
+                    {
+                        checkBoxFeature2.Checked = false;
+                    }
+
+                    //Setting the face, hairstyle, and voice comboboxes. I just found out that 0A, 0B, etc. correctly translates to index 10, 11, etc. Makes this much easier
+                    comboBoxFace.SelectedIndex = face;
+                    comboBoxHairstyle.SelectedIndex = hairstyle;
+                    comboBoxVoice.SelectedIndex = voice;
+
+                    //Changing clothing, hair, features, and skin color buttons to the color selected in game
                     buttonColorClothing.BackColor = Color.FromArgb(clothingColorRed, clothingColorGreen, clothingColorBlue);
                     buttonColorHairstyle.BackColor = Color.FromArgb(hairColorRed, hairColorGreen, hairColorBlue);
+                    buttonColorFeature1.BackColor = Color.FromArgb(feature1ColorRed, feature1ColorGreen, feature1ColorBlue);
+                    buttonColorFeature2.BackColor = Color.FromArgb(feature2ColorRed, feature2ColorGreen, feature2ColorBlue);
+                    buttonColorSkinTone.BackColor = Color.FromArgb(skinColorRed, skinColorGreen, skinColorBlue);
 
                     //Create item box UI. Using UpdateItemBox() instead of createItemBox(), because they pracitically accomplish the same thing
                     //and createItemBox() has issues if trying to open another file (after already opening one)
@@ -1208,6 +1253,16 @@ namespace main
             int clothingAddress = 206;
             int clothingColorAddress = 22416;
             int hairstyleColorAddress = 68;
+            int genderAddress = 40;
+            int faceAddress = 41;
+            int hairstyleAddress = 42;
+            int feature1Address = 29715;
+            int feature2Address = 29719;
+            int feature1ColorAddress = 29712;
+            int feature2ColorAddress = 29716;
+            int skinColorAddress = 29704;
+            int voiceAddress = 207;
+            int hunterRankAddress = 23112;
 
             //Getting the byte[] values for all necessary data
             byte[] zenny = convertIntToBytes((int)numericUpDownZenny.Value, "8");
@@ -1217,12 +1272,31 @@ namespace main
             byte[] clothing = convertIntToBytes(comboBoxClothing.SelectedIndex, "2");
             byte[] clothingColor = convertIntToBytes(buttonColorClothing.BackColor.ToArgb(),"8");
             byte[] hairstyleColor = convertIntToBytes(buttonColorHairstyle.BackColor.ToArgb(), "8");
+            byte[] face = convertIntToBytes(comboBoxFace.SelectedIndex, "2");
+            byte[] hairstyle = convertIntToBytes(comboBoxHairstyle.SelectedIndex, "2");
+            byte[] voice = convertIntToBytes(comboBoxVoice.SelectedIndex, "2");
+            byte[] feature1Color = convertIntToBytes(buttonColorFeature1.BackColor.ToArgb(), "8");
+            byte[] feature2Color = convertIntToBytes(buttonColorFeature2.BackColor.ToArgb(), "8");
+            byte[] skinColor = convertIntToBytes(buttonColorSkinTone.BackColor.ToArgb(), "8");
+            byte[] hunterRank = convertIntToBytes((int)numericUpDownHR.Value, "4");
+
+            //Gender and features require if statements to determine which state they should be
+            byte[] gender = { 00 }; //00 is a placeholder, values will be set later
+            byte[] feature1 = { 00 };
+            byte[] feature2 = { 00 };
+
+            if (radioButtonMale.Checked == true) { gender = convertIntToBytes(0, "2"); } // 0 = Male
+                else if (radioButtonFemale.Checked == true) { gender = convertIntToBytes(1, "2"); } // 1 = Female
+            if (checkBoxFeature1.Checked == true) { feature1 = convertIntToBytes(255, "2"); } // 255 = Feature is ON
+                else if (checkBoxFeature1.Checked == false) { feature1 = convertIntToBytes(0, "2"); } // 0 = Feature is OFF
+            if (checkBoxFeature2.Checked == true) { feature2 = convertIntToBytes(255, "2"); } // 255 = Feature is ON
+                else if (checkBoxFeature2.Checked == false) { feature2 = convertIntToBytes(0, "2"); } // 0 = Feature is OFF
 
             //Converting player name to byte[] is more complicated though
             char[] playerNameChar = new char[24];
 
             //Convert player name from text box into character array
-            for(int i = 0; i < textBoxPlayerName.TextLength; i++)
+            for (int i = 0; i < textBoxPlayerName.TextLength; i++)
             {
                 playerNameChar[i] = textBoxPlayerName.Text[i];
             }
@@ -1241,7 +1315,16 @@ namespace main
             saveData[clothingAddress] = clothing[0];
             for (int i = 0; i < 3; i++) { saveData[clothingColorAddress + i] = clothingColor[i + 1]; } // ARGB code starts with alpha, which isn't used by the game, so must skip it
             for (int i = 0; i < 3; i++) { saveData[hairstyleColorAddress + i] = hairstyleColor[i + 1]; } // Same as above
-
+            saveData[genderAddress] = gender[0];
+            saveData[faceAddress] = face[0];
+            saveData[hairstyleAddress] = hairstyle[0];
+            saveData[feature1Address] = feature1[0];
+            saveData[feature2Address] = feature2[0];
+            for (int i = 0; i < 3; i++) { saveData[feature1ColorAddress + i] = feature1Color[i + 1]; }
+            for (int i = 0; i < 3; i++) { saveData[feature2ColorAddress + i] = feature2Color[i + 1]; }
+            for (int i = 0; i < 3; i++) { saveData[skinColorAddress + i] = skinColor[i + 1]; }
+            saveData[voiceAddress] = voice[0];
+            for (int i = 0; i < 2; i++) { saveData[hunterRankAddress + i] = hunterRank[i]; }
         }
 
         //Creating a function that turns a int into a byte[]. bytelength is a string that determines how many *characters* the returned byte[] should be

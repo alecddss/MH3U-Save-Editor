@@ -139,26 +139,6 @@ Having a 24 character name may cause unforseen issues,
 so name yourself at your own risk.
 </value>
   </data>
-  <data name="textBox8.ToolTip" xml:space="preserve">
-    <value>The character creator in-game only allows 10 characters
-to be set as the player's name.
-0 to 24 characters are accepted for the players name, 
-however, the player's name will spill out of text boxes
-(in main menu, guild cards, etc.).
-Having a 24 character name may cause unforseen issues,
-so name yourself at your own risk.
-</value>
-  </data>
-  <data name="textBox7.ToolTip" xml:space="preserve">
-    <value>The character creator in-game only allows 10 characters
-to be set as the player's name.
-0 to 24 characters are accepted for the players name, 
-however, the player's name will spill out of text boxes
-(in main menu, guild cards, etc.).
-Having a 24 character name may cause unforseen issues,
-so name yourself at your own risk.
-</value>
-  </data>
   <data name="label15.Text" xml:space="preserve">
     <value>* Any zenny/point above the maximum will result in your zenny/
 points looping around to the minimum amount. 
@@ -170,9 +150,6 @@ you have positive zenny again. Because of this, it's
 recommended to go below the max so that any gained zenny 
 won't push you past it (all of the above is true for points as well).</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>15, 17</value>
-  </metadata>
   <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>114, 17</value>
   </metadata>
@@ -206,12 +183,6 @@ won't push you past it (all of the above is true for points as well).</value>
   </metadata>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>939, 17</value>
-  </metadata>
-  <metadata name="toolTip5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1060, 17</value>
-  </metadata>
-  <metadata name="toolTip6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1157, 17</value>
   </metadata>
   <metadata name="toolTip7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1254, 17</value>

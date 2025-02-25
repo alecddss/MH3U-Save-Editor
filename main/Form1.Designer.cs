@@ -44,6 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.numericUpDownSkill2Points = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.numericUpDownSkill1Points = new System.Windows.Forms.NumericUpDown();
+            this.label28 = new System.Windows.Forms.Label();
             this.comboBoxTalisSkill2 = new System.Windows.Forms.ComboBox();
             this.comboBoxTalisSkill1 = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -86,33 +90,31 @@
             this.buttonColorSkinTone = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonColorHairstyle = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBoxVoice = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBoxHairstyle = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonColorFeature2 = new System.Windows.Forms.Button();
             this.buttonColorFeature1 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxFeature2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxFeature1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFace = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonColorClothing = new System.Windows.Forms.Button();
             this.comboBoxClothing = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPlayerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.numericUpDownHR = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTime = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownResource = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownZenny = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -135,25 +137,22 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolTip7 = new System.Windows.Forms.ToolTip(this.components);
             this.comboBoxEquipEmpty = new System.Windows.Forms.ComboBox();
-            this.numericUpDownSkill1Points = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
-            this.numericUpDownSkill2Points = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill2Points)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill1Points)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUpgrade)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZenny)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill1Points)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill2Points)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1880,6 +1879,60 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipment Box";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownSkill2Points
+            // 
+            this.numericUpDownSkill2Points.Enabled = false;
+            this.numericUpDownSkill2Points.Location = new System.Drawing.Point(119, 279);
+            this.numericUpDownSkill2Points.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDownSkill2Points.Minimum = new decimal(new int[] {
+            128,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownSkill2Points.Name = "numericUpDownSkill2Points";
+            this.numericUpDownSkill2Points.Size = new System.Drawing.Size(62, 20);
+            this.numericUpDownSkill2Points.TabIndex = 222;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(39, 281);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(70, 13);
+            this.label29.TabIndex = 221;
+            this.label29.Text = "Skill 2 Points:";
+            // 
+            // numericUpDownSkill1Points
+            // 
+            this.numericUpDownSkill1Points.Enabled = false;
+            this.numericUpDownSkill1Points.Location = new System.Drawing.Point(119, 226);
+            this.numericUpDownSkill1Points.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDownSkill1Points.Minimum = new decimal(new int[] {
+            128,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownSkill1Points.Name = "numericUpDownSkill1Points";
+            this.numericUpDownSkill1Points.Size = new System.Drawing.Size(62, 20);
+            this.numericUpDownSkill1Points.TabIndex = 220;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(39, 228);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(70, 13);
+            this.label28.TabIndex = 219;
+            this.label28.Text = "Skill 1 Points:";
             // 
             // comboBoxTalisSkill2
             // 
@@ -7052,22 +7105,22 @@
             this.tabPage3.Controls.Add(this.buttonColorSkinTone);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.buttonColorHairstyle);
-            this.tabPage3.Controls.Add(this.comboBox6);
+            this.tabPage3.Controls.Add(this.comboBoxVoice);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.comboBox5);
+            this.tabPage3.Controls.Add(this.comboBoxHairstyle);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.buttonColorFeature2);
             this.tabPage3.Controls.Add(this.buttonColorFeature1);
-            this.tabPage3.Controls.Add(this.checkBox3);
-            this.tabPage3.Controls.Add(this.checkBox2);
+            this.tabPage3.Controls.Add(this.checkBoxFeature2);
+            this.tabPage3.Controls.Add(this.checkBoxFeature1);
             this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.comboBox4);
+            this.tabPage3.Controls.Add(this.comboBoxFace);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.buttonColorClothing);
             this.tabPage3.Controls.Add(this.comboBoxClothing);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.radioButton2);
-            this.tabPage3.Controls.Add(this.radioButton1);
+            this.tabPage3.Controls.Add(this.radioButtonFemale);
+            this.tabPage3.Controls.Add(this.radioButtonMale);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.textBoxPlayerName);
             this.tabPage3.Controls.Add(this.label5);
@@ -7081,7 +7134,6 @@
             // 
             // buttonColorSkinTone
             // 
-            this.buttonColorSkinTone.Enabled = false;
             this.buttonColorSkinTone.Location = new System.Drawing.Point(78, 263);
             this.buttonColorSkinTone.Name = "buttonColorSkinTone";
             this.buttonColorSkinTone.Size = new System.Drawing.Size(55, 21);
@@ -7093,7 +7145,6 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Enabled = false;
             this.label12.Location = new System.Drawing.Point(13, 267);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
@@ -7110,11 +7161,10 @@
             this.buttonColorHairstyle.UseVisualStyleBackColor = true;
             this.buttonColorHairstyle.Click += new System.EventHandler(this.buttonColorHairstyle_Click);
             // 
-            // comboBox6
+            // comboBoxVoice
             // 
-            this.comboBox6.Enabled = false;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.comboBoxVoice.FormattingEnabled = true;
+            this.comboBoxVoice.Items.AddRange(new object[] {
             "Type 1",
             "Type 2",
             "Type 3",
@@ -7135,26 +7185,24 @@
             "Type 18",
             "Type 19",
             "Type 20"});
-            this.comboBox6.Location = new System.Drawing.Point(80, 235);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(113, 21);
-            this.comboBox6.TabIndex = 209;
+            this.comboBoxVoice.Location = new System.Drawing.Point(80, 235);
+            this.comboBoxVoice.Name = "comboBoxVoice";
+            this.comboBoxVoice.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxVoice.TabIndex = 209;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Enabled = false;
             this.label11.Location = new System.Drawing.Point(37, 238);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 210;
             this.label11.Text = "Voice:";
             // 
-            // comboBox5
+            // comboBoxHairstyle
             // 
-            this.comboBox5.Enabled = false;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.comboBoxHairstyle.FormattingEnabled = true;
+            this.comboBoxHairstyle.Items.AddRange(new object[] {
             "Type 1",
             "Type 2",
             "Type 3",
@@ -7169,15 +7217,14 @@
             "Type 12",
             "Type 13",
             "Type 14"});
-            this.comboBox5.Location = new System.Drawing.Point(80, 206);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(113, 21);
-            this.comboBox5.TabIndex = 207;
+            this.comboBoxHairstyle.Location = new System.Drawing.Point(80, 206);
+            this.comboBoxHairstyle.Name = "comboBoxHairstyle";
+            this.comboBoxHairstyle.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxHairstyle.TabIndex = 207;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Enabled = false;
             this.label10.Location = new System.Drawing.Point(24, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
@@ -7186,7 +7233,6 @@
             // 
             // buttonColorFeature2
             // 
-            this.buttonColorFeature2.Enabled = false;
             this.buttonColorFeature2.Location = new System.Drawing.Point(158, 173);
             this.buttonColorFeature2.Name = "buttonColorFeature2";
             this.buttonColorFeature2.Size = new System.Drawing.Size(55, 21);
@@ -7197,7 +7243,6 @@
             // 
             // buttonColorFeature1
             // 
-            this.buttonColorFeature1.Enabled = false;
             this.buttonColorFeature1.Location = new System.Drawing.Point(158, 143);
             this.buttonColorFeature1.Name = "buttonColorFeature1";
             this.buttonColorFeature1.Size = new System.Drawing.Size(55, 21);
@@ -7206,47 +7251,43 @@
             this.buttonColorFeature1.UseVisualStyleBackColor = true;
             this.buttonColorFeature1.Click += new System.EventHandler(this.buttonColorFeature1_Click);
             // 
-            // checkBox3
+            // checkBoxFeature2
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Location = new System.Drawing.Point(81, 177);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(71, 17);
-            this.checkBox3.TabIndex = 204;
-            this.checkBox3.Text = "Feature 2";
-            this.toolTip6.SetToolTip(this.checkBox3, "For male characters, Feature 2 is a beard.\r\nFor female characters, Feature 2 is l" +
+            this.checkBoxFeature2.AutoSize = true;
+            this.checkBoxFeature2.Location = new System.Drawing.Point(81, 177);
+            this.checkBoxFeature2.Name = "checkBoxFeature2";
+            this.checkBoxFeature2.Size = new System.Drawing.Size(71, 17);
+            this.checkBoxFeature2.TabIndex = 204;
+            this.checkBoxFeature2.Text = "Feature 2";
+            this.toolTip6.SetToolTip(this.checkBoxFeature2, "For male characters, Feature 2 is a beard.\r\nFor female characters, Feature 2 is l" +
         "ipstick.");
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxFeature2.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxFeature1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Location = new System.Drawing.Point(81, 147);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(71, 17);
-            this.checkBox2.TabIndex = 203;
-            this.checkBox2.Text = "Feature 1";
-            this.toolTip5.SetToolTip(this.checkBox2, "For male characters, Feature 1 is a scar.\r\nFor female characters, Feature 1 is ey" +
+            this.checkBoxFeature1.AutoSize = true;
+            this.checkBoxFeature1.Location = new System.Drawing.Point(81, 147);
+            this.checkBoxFeature1.Name = "checkBoxFeature1";
+            this.checkBoxFeature1.Size = new System.Drawing.Size(71, 17);
+            this.checkBoxFeature1.TabIndex = 203;
+            this.checkBoxFeature1.Text = "Feature 1";
+            this.toolTip5.SetToolTip(this.checkBoxFeature1, "For male characters, Feature 1 is a scar.\r\nFor female characters, Feature 1 is ey" +
         "eshadow.");
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxFeature1.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Enabled = false;
             this.label9.Location = new System.Drawing.Point(23, 148);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 202;
             this.label9.Text = "Features:";
             // 
-            // comboBox4
+            // comboBoxFace
             // 
-            this.comboBox4.Enabled = false;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBoxFace.FormattingEnabled = true;
+            this.comboBoxFace.Items.AddRange(new object[] {
             "Type 1",
             "Type 2",
             "Type 3",
@@ -7258,15 +7299,14 @@
             "Type 9",
             "Type 10",
             "Type 11"});
-            this.comboBox4.Location = new System.Drawing.Point(80, 111);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(113, 21);
-            this.comboBox4.TabIndex = 200;
+            this.comboBoxFace.Location = new System.Drawing.Point(80, 111);
+            this.comboBoxFace.Name = "comboBoxFace";
+            this.comboBoxFace.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxFace.TabIndex = 200;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Enabled = false;
             this.label8.Location = new System.Drawing.Point(40, 114);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
@@ -7305,34 +7345,31 @@
             this.label7.TabIndex = 198;
             this.label7.Text = "Clothing:";
             // 
-            // radioButton2
+            // radioButtonFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(134, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2.TabIndex = 197;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Location = new System.Drawing.Point(134, 55);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(59, 17);
+            this.radioButtonFemale.TabIndex = 197;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(80, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 196;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Location = new System.Drawing.Point(80, 55);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonMale.TabIndex = 196;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Enabled = false;
             this.label6.Location = new System.Drawing.Point(29, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
@@ -7359,13 +7396,11 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.numericUpDownHR);
             this.tabPage4.Controls.Add(this.numericUpDownTime);
             this.tabPage4.Controls.Add(this.numericUpDownResource);
             this.tabPage4.Controls.Add(this.numericUpDownZenny);
             this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.label17);
-            this.tabPage4.Controls.Add(this.textBox7);
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.label14);
@@ -7377,6 +7412,18 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Misc. Edits";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownHR
+            // 
+            this.numericUpDownHR.Location = new System.Drawing.Point(198, 188);
+            this.numericUpDownHR.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDownHR.Name = "numericUpDownHR";
+            this.numericUpDownHR.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDownHR.TabIndex = 219;
             // 
             // numericUpDownTime
             // 
@@ -7448,45 +7495,14 @@
             this.label18.TabIndex = 204;
             this.label18.Text = "Time Played (in seconds):";
             // 
-            // textBox8
-            // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(216, 190);
-            this.textBox8.MaxLength = 24;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(37, 20);
-            this.textBox8.TabIndex = 203;
-            this.toolTip4.SetToolTip(this.textBox8, resources.GetString("textBox8.ToolTip"));
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Enabled = false;
-            this.label17.Location = new System.Drawing.Point(184, 193);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(26, 13);
-            this.label17.TabIndex = 202;
-            this.label17.Text = "GR:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(106, 190);
-            this.textBox7.MaxLength = 24;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(37, 20);
-            this.textBox7.TabIndex = 201;
-            this.toolTip4.SetToolTip(this.textBox7, resources.GetString("textBox7.ToolTip"));
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Enabled = false;
-            this.label16.Location = new System.Drawing.Point(74, 193);
+            this.label16.Location = new System.Drawing.Point(96, 190);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 13);
+            this.label16.Size = new System.Drawing.Size(96, 13);
             this.label16.TabIndex = 200;
-            this.label16.Text = "HR:";
+            this.label16.Text = "Hunter Rank (HR):";
             // 
             // label15
             // 
@@ -7623,60 +7639,6 @@
             this.comboBoxEquipEmpty.Text = "None";
             this.comboBoxEquipEmpty.Visible = false;
             // 
-            // numericUpDownSkill1Points
-            // 
-            this.numericUpDownSkill1Points.Enabled = false;
-            this.numericUpDownSkill1Points.Location = new System.Drawing.Point(119, 226);
-            this.numericUpDownSkill1Points.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.numericUpDownSkill1Points.Minimum = new decimal(new int[] {
-            128,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownSkill1Points.Name = "numericUpDownSkill1Points";
-            this.numericUpDownSkill1Points.Size = new System.Drawing.Size(62, 20);
-            this.numericUpDownSkill1Points.TabIndex = 220;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(39, 228);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(70, 13);
-            this.label28.TabIndex = 219;
-            this.label28.Text = "Skill 1 Points:";
-            // 
-            // numericUpDownSkill2Points
-            // 
-            this.numericUpDownSkill2Points.Enabled = false;
-            this.numericUpDownSkill2Points.Location = new System.Drawing.Point(119, 279);
-            this.numericUpDownSkill2Points.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.numericUpDownSkill2Points.Minimum = new decimal(new int[] {
-            128,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownSkill2Points.Name = "numericUpDownSkill2Points";
-            this.numericUpDownSkill2Points.Size = new System.Drawing.Size(62, 20);
-            this.numericUpDownSkill2Points.TabIndex = 222;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(39, 281);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(70, 13);
-            this.label29.TabIndex = 221;
-            this.label29.Text = "Skill 2 Points:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7700,18 +7662,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill2Points)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill1Points)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownUpgrade)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZenny)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill1Points)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSkill2Points)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7747,36 +7710,33 @@
         private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox comboBoxClothing;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonColorClothing;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxFace;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonColorFeature1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxFeature2;
+        private System.Windows.Forms.CheckBox checkBoxFeature1;
         private System.Windows.Forms.Button buttonColorFeature2;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBoxHairstyle;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolTip toolTip6;
         private System.Windows.Forms.ToolTip toolTip5;
         private System.Windows.Forms.Button buttonColorHairstyle;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBoxVoice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button buttonColorSkinTone;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolTip toolTip7;
@@ -7828,6 +7788,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.NumericUpDown numericUpDownSkill1Points;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.NumericUpDown numericUpDownHR;
     }
 }
 
