@@ -5,13 +5,12 @@ A simple and intuitive save editor that allows you to inject items, weapons, arm
 This is still a work-in-progress, but the following is completed:
   - Items can be saved to the item box.
   - Equipment can be saved to the equipment box (Armor, weapons and talismans). Each piece of equipment can be given decorations, armor can be upgraded and talismans can be given skills.
-  - You can change your Hunter's name, clothing, clothing color and hair color.
-  - Zenny, resource points and time played are all modifiable.
+  - You can change all aspects of your Hunter. Don't like what you made in the character customizer at the beginning of the game? No problem, just find the options you'd like and select them!
+  - Zenny, resource points, hunter rank, and time played are all modifiable.
 
 In the future, I hope to add the following:
-  - Modify your HR/GR.
-  - Change normally unchangeable features about your Hunter (i.e., gender, face, voice, etc.).
-  - Beyond that, I hope to be able to change how far you are in the village quest story (I.e., from 1 star to 3 star).
+  - Change how far you are in the village quest story (I.e., from 1 star to 3 star).
+  - Change how far you are in hub quests (I.e., skip over HR and go directly into GR).
 
 ## Disclaimers:
 
@@ -74,7 +73,8 @@ Additionally, you will find items like DUMMY or No Name within each equipment na
 This tab allows you change your zenny and resource points, as well as your time played. There is a disclaimer mentioning not to go over the max zenny/resource points limit of 2,147,483,647. I tried to be as concise as possible when explaining, but if you require a more thorough explanation, see the note below. HR and GR editing will be added whenever I'm able to find their location in the save file.
 
 >[!NOTE]
->The reason why there is a limit of 2,147,483,647 zenny/points is due to the way the game stores these values. The game uses 4 hex bytes to save your currency which has a minimum of [00 00 00 00] (this is equal to 0) and a maximum of [FF FF FF FF] (this is equal to 4,294,967,296). Now you might be wondering why 4,294,967,296 is not the maximum. This is because the first half of this 4,294,967,296 (A.K.A. 2,147,483,647) are read and understood by the game as positive numbers. This leaves the second half as negative numbers. So if you were to count by 1 over and over, you'd go: 0, 1, 2, 3, ..., 2,147,483,646, 2,147,483,647, -2,147,483,648, -2,147,483,647, ..., -3, -2, -1 (-1 is the very last number). So what does this mean for you? This means that if you have the exact max of 2,147,483,647 currency, and gain even 1 zenny or point, you now have -2,147,483,648 of that currency. This is REALLY bad because the game treats it as a negative, and won't allow you to spend that currency until you're back positive again. Which means you need to gain 2,147,483,648 currency just to make it back to 0. Due to this little quirk in the programming, I strongly recommend you give yourself space between your desired currency and the max. Something like 2,000,000,000 would work well, since you would need to make nearly 150 million currency to roll into the negative (something which is unlikely to do unless you plan on really grinding the game).
+>The reason why there is a limit of 2,147,483,647 zenny/points is due to the way the game stores these values. The game uses 4 hex bytes to save your currency which has a minimum of [00 00 00 00] (this is equal to 0) and a maximum of [FF FF FF FF] (this is equal to 4,294,967,296). Now you might be wondering why 4,294,967,296 is not the maximum. This is because the first half of this 4,294,967,296 (A.K.A. 2,147,483,647) are read and understood by the game as positive numbers. This leaves the second half as negative numbers. So if you were to count by 1 over and over, you'd go: 0, 1, 2, 3, ..., 2,147,483,646, 2,147,483,647, -2,147,483,648, -2,147,483,647, ..., -3, -2, -1 (-1 is the very last number).
+>So what does this mean for you? This means that if you have the exact max of 2,147,483,647 currency, and gain even 1 zenny or point, you now have -2,147,483,648 of that currency. This is REALLY bad because the game treats it as a negative, and won't allow you to spend that currency until you're back positive again. Which means you need to gain 2,147,483,648 currency just to make it back to 0. Due to this little quirk in the programming, I strongly recommend you give yourself space between your desired currency and the max. Something like 2,000,000,000 would work well, since you would need to make nearly 150 million currency to roll into the negative (something which is unlikely to do unless you plan on really grinding the game).
 
 ### Saving file
 Your file is completely unaffected until you hit save. If you decide you don't want to save your changes, simply close the application. Assuming you want to save your file, click File and then you can either click "Save File" to overwrite the save file you opened to start with, or "Save As..." to create another file to save your data to. Once you hit save, your file is saved and you can safely close the application.
